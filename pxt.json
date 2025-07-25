@@ -1,16 +1,17 @@
 {
     "name": "pxt_pybit",
-    "version": "0.0.0",
-    "description": "",
+    "version": "1.0.0",
+    "description": "Pybit robot designed by Siyeenove - beta",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "main.ts",
+        "IR.cpp",
+        "shims.d.ts",
+        "enums.d.ts",
+        "_locales/zh-cn/pxt-mcar-strings.json"
     ],
     "testFiles": [
         "test.ts"
