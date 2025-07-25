@@ -1,7 +1,7 @@
 {
     "name": "pxt_pybit",
     "version": "1.0.0",
-    "description": "Pybit robot designed by Siyeenove - beta",
+    "description": "Pybit robot designed by Siyeenove",
     "dependencies": {
         "core": "*"
     },
