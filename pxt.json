@@ -1,7 +1,8 @@
 {
-    "name": "pxt_pybit",
+    "name": "pxt-pybit",
     "version": "1.0.0",
     "description": "Pybit robot designed by Siyeenove",
+    "license": "MIT",
     "dependencies": {
         "core": "*"
     },
