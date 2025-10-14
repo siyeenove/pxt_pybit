@@ -3,14 +3,15 @@
 
 ![](/image.png/)  
 
-This library is designed to drive Pybit, You can get Pybit here.
+This library is designed to drive Pybit, You can get Pybit here:   
 
-[Buy](https://siyeenove.com/buy/)  
+[Buy](https://www.amazon.com/dp/B0FQ612LMN)   
+[SIYEENOVE](https://siyeenove.com/buy/)   
 
 Product Tutorial: 
-
-[Github](https://github.com/siyeenove/M1C0001)   
-[Github PDF](https://siyeenove.github.io/M1C0001)  
+  
+[Github PDF](https://siyeenove.github.io/M1C0001)    
+[SIYEENOVE](https://siyeenove.com/tutorial/)    
 
 ## Code Example
 ```JavaScript
