@@ -4,7 +4,7 @@
 */
 
 //% weight=10 color=#00b0ff block="Pybit" blockId="Pybit" icon="\uf48b"
-namespace Pybit {
+namespace pybit {
     export enum WheelDir {
         //%block="forward"
         FW = 1,
@@ -635,7 +635,7 @@ namespace Pybit {
     /**
      * 
      */
-    //% shim=PybitInfrared::irCode
+    //% shim=pybitInfrared::irCode
     function irCode(): number {
         return 0;
     }

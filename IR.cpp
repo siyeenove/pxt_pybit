@@ -2,7 +2,7 @@
 
 //% color=50 weight=80
 //% icon="\uf1eb"
-namespace PybitInfrared { 
+namespace pybitInfrared { 
 int ir_code = 0x00;
 int ir_addr = 0x00;
 int data;

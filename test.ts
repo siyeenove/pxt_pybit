@@ -1,18 +1,18 @@
-Pybit.irCallBack(function () {
-    if (Pybit.irButton(Pybit.IRButtons.Up)) {
-        Pybit.carDirectionSpeed(Pybit.PybitDir.FW, 100)
+pybit.irCallBack(function () {
+    if (pybit.irButton(pybit.IRButtons.Up)) {
+        pybit.carDirectionSpeed(pybit.PybitDir.FW, 100)
     }
-    if (Pybit.irButton(Pybit.IRButtons.Down)) {
-        Pybit.carDirectionSpeed(Pybit.PybitDir.BW, 100)
+    if (pybit.irButton(pybit.IRButtons.Down)) {
+        pybit.carDirectionSpeed(pybit.PybitDir.BW, 100)
     }
-    if (Pybit.irButton(Pybit.IRButtons.Left)) {
-        Pybit.carTurn(Pybit.PybitTurn.Left, 50, 100)
+    if (pybit.irButton(pybit.IRButtons.Left)) {
+        pybit.carTurn(pybit.PybitTurn.Left, 50, 100)
     }
-    if (Pybit.irButton(Pybit.IRButtons.Right)) {
-        Pybit.carTurn(Pybit.PybitTurn.Right, 50, 100)
+    if (pybit.irButton(pybit.IRButtons.Right)) {
+        pybit.carTurn(pybit.PybitTurn.Right, 50, 100)
     }
-    if (Pybit.irButton(Pybit.IRButtons.OK)) {
-        Pybit.carStop()
+    if (pybit.irButton(pybit.IRButtons.OK)) {
+        pybit.carStop()
     }
 
     // The correct infrared key value can only be read 
@@ -24,31 +24,31 @@ Pybit.irCallBack(function () {
 
 // When the speed of the left and right wheels of the Pybit trolley is not consistent, 
 // this function can adjust the speed of the wheel and save it permanently.
-Pybit.wheelsAdjustment(0, 0)
+pybit.wheelsAdjustment(0, 0)
 
 basic.pause(1000)
-Pybit.setWheelDirectionSpeed(Pybit.PybitWheels.AllWheel, 0, Pybit.WheelDir.FW)
+pybit.setWheelDirectionSpeed(pybit.PybitWheels.AllWheel, 0, pybit.WheelDir.FW)
 basic.pause(1000)
-Pybit.setWheelDirectionSpeed(Pybit.PybitWheels.AllWheel, 0, Pybit.WheelDir.BW)
+pybit.setWheelDirectionSpeed(pybit.PybitWheels.AllWheel, 0, pybit.WheelDir.BW)
 basic.pause(1000)
-Pybit.wheelStop(Pybit.PybitWheels.LeftWheel)
-Pybit.singleHeadlights(Pybit.RGBLight.RGBA, 255, 255, 255)
-basic.showNumber(Pybit.batteryLevel(Pybit.BatteryType.AA))
+pybit.wheelStop(pybit.PybitWheels.LeftWheel)
+pybit.singleHeadlights(pybit.RGBLight.RGBA, 255, 255, 255)
+basic.showNumber(pybit.batteryLevel(pybit.BatteryType.AA))
 basic.pause(1000)
-basic.showString(Pybit.readVersions())
+basic.showString(pybit.readVersions())
 basic.pause(1000)
 basic.forever(function () {
-    Pybit.trackbitStateValue()
-    if (Pybit.readGrayscaleSensorState(Pybit.TrackbitStateType.TrackingState0)) {
+    pybit.trackbitStateValue()
+    if (pybit.readGrayscaleSensorState(pybit.TrackbitStateType.TrackingState0)) {
         basic.showIcon(IconNames.No)
         basic.pause(1000)
     }
-    Pybit.extendServoControl(Pybit.ServoIndex.S1, Pybit.ServoType.Servo180, 0)
-    if (Pybit.readGrayscaleSensorState(Pybit.TrackbitStateType.TrackingState7)) {
+    pybit.extendServoControl(pybit.ServoIndex.S1, pybit.ServoType.Servo180, 0)
+    if (pybit.readGrayscaleSensorState(pybit.TrackbitStateType.TrackingState7)) {
         basic.showIcon(IconNames.Yes)
         basic.pause(1000)
     }
-    basic.showNumber(Pybit.sonar(Pybit.SonarUnit.Centimeters))
+    basic.showNumber(pybit.sonar(pybit.SonarUnit.Centimeters))
     basic.pause(1000)
-    Pybit.extendServoControl(Pybit.ServoIndex.S1, Pybit.ServoType.Servo180, 180)
+    pybit.extendServoControl(pybit.ServoIndex.S1, pybit.ServoType.Servo180, 180)
 })

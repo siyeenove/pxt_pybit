@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace PybitInfrared {
+declare namespace pybitInfrared {
 }
 
 // Auto-generated. Do not edit. Really.
