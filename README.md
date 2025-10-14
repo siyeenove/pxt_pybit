@@ -10,7 +10,7 @@ This library is designed to drive Pybit, You can get Pybit here:
 
 Product Tutorial: 
   
-[Github PDF](https://siyeenove.github.io/M1C0001)    
+[Github PDF](https://siyeenove.github.io/M1C0001/Pybit%20tutorial%20-%20English%202025-10-14.pdf)    
 [SIYEENOVE](https://siyeenove.com/tutorial/)    
 
 ## Code Example
