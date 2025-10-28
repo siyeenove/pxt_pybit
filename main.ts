@@ -641,8 +641,7 @@ namespace pybit {
     }
 
     /**
-      * This function runs in the background all the time to read the value 
-      * to be controlled in the IR in real time.
+      * Run code when a button is pressed on the IR remote.
       */
     //% group="Infrared sensor"
     //% weight=160
@@ -669,7 +668,6 @@ namespace pybit {
     /**
      * Select the value of the infrared key that you want to be pressed.
      */
-    //% blockId=infrared_button
     //% group="Infrared sensor"
     //% irButton.fieldEditor="gridpicker"
     //% irButton.fieldOptions.columns=3

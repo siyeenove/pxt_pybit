@@ -1,5 +1,5 @@
 
-# Siyeenove Pybit Package
+# Siyeenove Pybit extension
 
 ![](/image.png/)  
 
