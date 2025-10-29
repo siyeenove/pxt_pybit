@@ -199,7 +199,7 @@ namespace pybit {
         THREE0 = 15
     }
     
-    let IR_Val = 0
+    let irVal = 0
     let leftWheelSpeed = 0
     let rightWheelSpeed = 0
     let threeWayStateValue = 0
@@ -649,15 +649,13 @@ namespace pybit {
     export function irCallBack(handler: () => void) {  
         //handler is the functional argument to the irCallback function and is the block
         //to be executed inside the irCallback function generation block.
-        pins.setPull(DigitalPin.P9, PinPullMode.PullUp)
-        //A trigger event is registered, and handler is the function to execute to trigger the event.
-        control.onEvent(98, 3500, handler)             
+        pins.setPull(DigitalPin.P9, PinPullMode.PullUp)            
         control.inBackground(() => {
             while (true) {
-                IR_Val = irCode()
-                if (IR_Val != 0xff00) {
-                    //Fires the event registered above（control.onEvent（））
-                    control.raiseEvent(98, 3500, EventCreationMode.CreateAndFire) 
+                // irVal = 8-bit command + 8-bit command inverse code
+                irVal = irCode()
+                if (irVal > 0xff) {
+                    handler()
                 }
                 basic.pause(20)
             }
@@ -675,7 +673,7 @@ namespace pybit {
     //% block="IR button %irButton is pressed"
     //% weight=151
     export function irButton(irButton: IRButtons): boolean {
-        return (IR_Val & 0x00ff) == irButton as number
+        return (irVal & 0x00ff) == irButton as number
     }
 
 
@@ -689,7 +687,7 @@ namespace pybit {
     //% block="IR value"
     //% weight=150
     export function irValue(): number {
-        return IR_Val & 0x00ff;
+        return irVal & 0x00ff;
     }
 
 
