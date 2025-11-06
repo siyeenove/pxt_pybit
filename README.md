@@ -3,7 +3,7 @@
 
 ![](/image.jpg/)  
 
-This library is designed to drive Pybit, You can get Pybit here:   
+This library is designed to drive Pybit, which you can buy here:        
 
 [Buy](https://www.amazon.com/dp/B0FQ612LMN)   
 [SIYEENOVE](https://siyeenove.com/buy/)   
