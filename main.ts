@@ -700,14 +700,14 @@ namespace pybit {
     /**
      * Servo control module, used for 90, 180, 270 degrees servo.
      * When the S1--S3 ports of Pybit are connected to the servo, this function can control the servo.
-     * @param index - Servo interface on Pybit.
+     * @param index - Servo interface on Pybit, eg: S1, S2, S2
      * @param servoType - Servo type, eg: 90, 180, 270
      * @param angle - The Angle of rotation of the servo.
      */
     //% group="Expansion port"
     //% weight=120
     //% block="set %index %servoType servo angle to %angle°"
-    //% index.defl=Pybit.ServoIndex.S1 servoType.defl=Pybit.ServoType.Servo90
+    //% index.defl=pybit.ServoIndex.S1 servoType.defl=pybit.ServoType.Servo90
     export function extendServoControl(index: ServoIndex, servoType: ServoType, angle: number): void {
         let angleMap: number
         if (servoType == ServoType.Servo90) {
@@ -736,14 +736,14 @@ namespace pybit {
 
     /**
      * The steering gear rotates continuously, and is used for the steering gear of 360 degrees rotation.
-     * @param index - Servo interface on Pybit.
+     * @param index - Servo interface on Pybit, eg: S1, S2, S2
      * @param speed - The speed at which the servo rotates.
      */
     //% group="Expansion port"
     //% weight=110
     //% block="set %index 360° servo speed to %speed\\%"
     //% speed.min=-100 speed.max=100
-    //% index.defl=Pybit.ServoIndex.S1
+    //% index.defl=pybit.ServoIndex.S1
     export function continuousServoControl(index: ServoIndex, speed: number): void {
         speed = Math.map(speed, -100, 100, 0, 180)
         extendServoControl(index, ServoType.Servo180, speed)
@@ -758,7 +758,7 @@ namespace pybit {
     //% group="Battery"
     //% weight=100
     //% block="battery level: %batType"
-    //% batType.defl=Pybit.BatteryType.AA
+    //% batType.defl=pybit.BatteryType.AA
     export function batteryLevel(batType: BatteryType) : number {
         let i2cBuffer = pins.createBuffer(1);
         if (batType == BatteryType.AA)
@@ -783,7 +783,7 @@ namespace pybit {
     //% group="APP command"
     //% weight=91
     //% block="%side textview display %str"
-    //% side.defl=Pybit.Textview.Left
+    //% side.defl=pybit.Textview.Left
     export function display(side: Textview, str: string): string {
         let strCmd;
         if (side == Textview.Left){
