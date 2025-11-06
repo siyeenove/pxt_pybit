@@ -1,7 +1,7 @@
 
 # Siyeenove Pybit extension
 
-![](/image.png/)  
+![](/image.jpg/)  
 
 This library is designed to drive Pybit, You can get Pybit here:   
 
