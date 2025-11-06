@@ -468,13 +468,14 @@ namespace pybit {
 
     /**
     * Select a headlight and set the RGB color.
+    * @param light - Choose which headlights to use.
     * @param r - Red color value of RGB color. eg: 0
     * @param g - Green color value of RGB color. eg: 128
     * @param b - Blue color value of RGB color. eg: 255
     */
     //% group="RGB LED headlights"
     //% inlineInputMode=inline
-    //% blockId=RGB block="set %RGBLight color: red %r green %g blue %b"
+    //% block="set %RGBLight color: red %r green %g blue %b"
     //% r.min=0 r.max=255
     //% g.min=0 g.max=255
     //% b.min=0 b.max=255
@@ -559,7 +560,8 @@ namespace pybit {
 
 
     /**
-     * Judge 3 gray sensor values.
+     * Determine the status of 3 tracking sensors.
+     * @param state - The status of the 3 tracking sensors.
      */
     //% group="Tracking sensor"
     //% weight=260
@@ -570,7 +572,7 @@ namespace pybit {
 
 
     /**
-     * Return 3 grayscale sensor values.
+     * Returns the values of the 3 tracking sensors.
      */
     //% group="Tracking sensor"
     //% weight=250
@@ -581,7 +583,9 @@ namespace pybit {
 
 
     /**
-     * Check whether the single grayscale Sensor is on the black line.
+     * Check whether the single tracking Sensor is on the black line.
+     * @param channel - Select which tracking sensor to use.
+     * @param state - Select the state of the tracking sensor.
      */
     //% group="Tracking sensor"
     //% weight=240
@@ -608,6 +612,7 @@ namespace pybit {
     /**
       * Pybit extends the ultrasonic module to read the distance values measured by the ultrasonic module.
       * Returns the distance value measured by the ultrasonic module, eg: Centimeters, Inch
+      * @param unit - The unit of the return value.
       */
     //% group="Sonar sensor"
     //% block="sonar distance %unit"
@@ -664,7 +669,8 @@ namespace pybit {
 
 
     /**
-     * Select the value of the infrared key that you want to be pressed.
+     * Determine which infrared key is pressed.
+     * @param irButton - Select the value of the infrared key that you want to be pressed.
      */
     //% group="Infrared sensor"
     //% irButton.fieldEditor="gridpicker"
@@ -694,7 +700,7 @@ namespace pybit {
     /**
      * Servo control module, used for 90, 180, 270 degrees servo.
      * When the S1--S3 ports of Pybit are connected to the servo, this function can control the servo.
-     * @param index - Servo interface on Pybit, eg: S1, S2, S2
+     * @param index - Servo interface on Pybit.
      * @param servoType - Servo type, eg: 90, 180, 270
      * @param angle - The Angle of rotation of the servo.
      */
@@ -730,7 +736,7 @@ namespace pybit {
 
     /**
      * The steering gear rotates continuously, and is used for the steering gear of 360 degrees rotation.
-     * @param index - Servo interface on Pybit, eg: S1, S2, S2
+     * @param index - Servo interface on Pybit.
      * @param speed - The speed at which the servo rotates.
      */
     //% group="Expansion port"
