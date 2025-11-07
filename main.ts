@@ -314,7 +314,7 @@ namespace pybit {
      * When the speed of the left and right wheels of the Pybit trolley is not consistent,
      * this function can adjust the speed of the wheel and save it permanently.
      * @param offset1 - Left Wheel offset. eg: -10 to 0
-     * @param offset1 - Right Wheel offset. eg: -10 to 0
+     * @param offset2 - Right Wheel offset. eg: -10 to 0
      */
     //% group="Wheels"
     //% weight=360
@@ -613,6 +613,7 @@ namespace pybit {
       * Pybit extends the ultrasonic module to read the distance values measured by the ultrasonic module.
       * Returns the distance value measured by the ultrasonic module, eg: Centimeters, Inch
       * @param unit - The unit of the return value.
+      * @param maxCmDistance - Maximum measurement distance, in centimeters.
       */
     //% group="Sonar sensor"
     //% block="sonar distance %unit"
